@@ -1,0 +1,93 @@
+.autocomplete {
+    position: relative;
+}
+.autocomplete__input {
+    position: relative;
+    font: 14px "Segoe UI";
+    color: #404040;
+    line-height: 20px;
+    padding: 5px 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+.autocomplete__input:focus {
+    border: 1px solid #5199db;
+    z-index: 5;
+}
+.autocomplete__input.autocomplete__has-error {
+    border: 1px solid #e3071c;
+    -webkit-box-shadow: 0 0 0 1px #e3071c;
+    box-shadow: 0 0 0 1px #e3071c;
+    outline: none;
+}
+.autocomplete__error {
+    position: absolute;
+    z-index: 1;
+    font: 13px "Segoe UI";
+    color: #e3071c;
+    line-height: 20px;
+    display: none;
+}
+.autocomplete__input.autocomplete__has-error+.autocomplete__error {
+    display: block;
+}
+.autocomplete__results {
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.15);
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.15);
+    font: 14px "Segoe UI";
+    color: #404040;
+    line-height: 20px;
+    max-height: 350px;
+    overflow: auto;
+}
+.autocomplete__results.is-active {
+    z-index: 4;
+}
+.autocomplete__item {
+    padding: 5px 5px;
+    cursor: pointer;
+}
+.autocomplete__item:hover, .autocomplete__item.is-active {
+    background: #5199db;
+    color: #fff;
+}
+.autocomplete__empty {
+    padding: 5px 5px;
+    color: #ccc;
+    cursor: default;
+}
+.autocomplete__text {
+    padding: 7px 5px 15px;
+    color: rgba(183, 183, 183, 1);
+    line-height: 15px;
+    font-size: 12px;
+}
+
+.autocomplete__input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgba(183, 183, 183, 1);
+}
+.autocomplete__input::-moz-placeholder { /* Firefox 19+ */
+    color: rgba(183, 183, 183, 1);
+}
+.autocomplete__input:-ms-input-placeholder { /* IE 10+ */
+    color: rgba(183, 183, 183, 1);
+}
+.autocomplete__input:-moz-placeholder { /* Firefox 18- */
+    color: rgba(183, 183, 183, 1);
+}
+
+.autocomplete__input:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgba(183, 183, 183, .5);
+}
+.autocomplete__input:focus::-moz-placeholder { /* Firefox 19+ */
+    color: rgba(183, 183, 183, .5);
+}
+.autocomplete__input:focus:-ms-input-placeholder { /* IE 10+ */
+    color: rgba(183, 183, 183, .5);
+}
+.autocomplete__input:focus:-moz-placeholder { /* Firefox 18- */
+    color: rgba(183, 183, 183, .5);
+}
